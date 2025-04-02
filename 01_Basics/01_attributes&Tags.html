@@ -1,0 +1,313 @@
+<!--
+-------------Attributes
+ ----= attributes are additional properties that can be added to HTML elements to provide    more information or functionality. They are always specified in the opening tag of an element and usually come in name/value pairs. Here are some common attributes:
+  - href: URL for links
+  - id: unique identifier for the element
+  - class: space-separated list of classes for styling
+  - style: inline CSS styles
+  - title: tooltip text on hover
+  - lang: language code for the content
+  - dir: text direction (ltr, rtl)
+  - tabindex: keyboard navigation order
+  - accesskey: keyboard shortcut to focus the element
+  - data-* attributes: custom data attributes for JavaScript manipulation
+    - src: URL for images or scripts
+    - alt: alternative text for images
+
+can be single or multiple tags
+  - <tag attribute = "value" Text Content</tag> 
+  - <tag attribute1 = "value1" attribute2 = "value2" Text Content</tag> 
+  - 
+-->
+
+<tag attribute = "value" Text Content</tag>
+
+id = "unique identifier"
+for example, <div id="header">...</div>
+
+class = "space-separated list of classes"
+for example, <div class="header main">...</div>
+
+-------------Tags-------------
+
+====== 1. Heading Tags ==========
+
+  <!-- Headings define titles and subtitles -->
+<h1>Main Heading (Largest)</h1>
+<h2>Subheading</h2>
+<h3>Section Title</h3>
+<h4>Subsection</h4>
+<h5>Smaller Heading</h5>
+<h6>Smallest Heading</h6>
+
+<!-- Headings create a clear structure -->
+<h1>Website Title</h1>
+<h2>About Us</h2>
+<h3>Our Team</h3>
+<h4>Team Member 1</h4>
+
+<!-- Headings are block elements (start on a new line) -->
+<h2>This is a heading</h2>
+<h2>This is another heading</h2>
+
+<!-- Search engines (SEO) give more importance to `<h1>` -->
+<h1>Best Travel Destinations</h1>
+
+<!-- Headings should not be skipped randomly (avoid jumping from <h1> to <h4>) -->
+<h1>Correct Structure</h1>
+<h2>Subtopic</h2>
+<h3>Detailed Information</h3>
+
+<!-- Style headings using CSS -->
+<h1 style="color: blue; text-align: center;">Styled Heading</h1>
+
+<!-- Do not use headings just to make text bold (use <strong> instead) -->
+<p><strong>This is important text.</strong></p> <!-- ✅ Correct -->
+<h3>This is important text.</h3> <!-- ❌ Wrong -->
+
+<!-- Headings should be meaningful (use them for content structure, not design) -->
+
+
+======  2. Paragraph Tags =========
+ 
+<!-- Defines a paragraph -->
+<p>This is a paragraph.</p>
+
+<!-- Each `<p>` starts on a new line -->
+<p>First paragraph.</p>
+<p>Second paragraph.</p>
+
+<!-- Extra spaces and line breaks inside `<p>` are ignored -->
+<p>This      is    a    single    paragraph.</p>
+
+<!-- Use `<br>` for line breaks inside a paragraph -->
+<p>This is line one.<br>This is line two.</p>
+
+<!-- Use `align` (Deprecated, use CSS instead) -->
+<p align="center">This is a centered paragraph.</p>
+
+<!-- Style with CSS instead of `align` -->
+<p style="text-align: center; color: blue;">This is a styled paragraph.</p>
+
+<!-- Paragraphs with margins for spacing -->
+<p style="margin: 20px 0;">Paragraph with extra spacing.</p>
+
+<!-- Nested paragraphs are NOT allowed -->
+<p>This is a paragraph.
+    <p>This is incorrect nesting.</p> <!-- ❌ Wrong! -->
+</p>
+
+<!-- Use multiple `<p>` tags instead -->
+<p>This is the first paragraph.</p>
+<p>This is the second paragraph.</p>
+
+<!-- Paragraph inside a div -->
+<div>
+    <p>Paragraph inside a div.</p>
+</div>
+
+
+
+====== 4. hr tag========
+
+<!-- Creates a horizontal line -->
+<hr>
+
+<!-- Used to separate content -->
+<p>First paragraph</p>
+<hr>
+<p>Second paragraph</p>
+
+<!-- `width` sets the length of the line -->
+<hr width="50%">
+
+<!-- `size` defines thickness (in pixels) -->
+<hr size="5">
+
+<!-- `color` sets the line color (deprecated in HTML5, use CSS instead) -->
+<hr color="blue">
+
+<!-- `align` aligns the line (deprecated, use CSS instead) -->
+<hr align="left">
+
+<!-- Styled with CSS for better control -->
+<hr style="border: 2px solid black; width: 80%;">
+
+<!-- `<hr>` inside a section for content separation -->
+<section>
+    <h2>Chapter 1</h2>
+    <p>Introduction to HTML</p>
+    <hr>
+    <h2>Chapter 2</h2>
+    <p>Learning CSS</p>
+</section>
+
+
+====== 5. Image Tag========
+
+<!-- Displays an image -->
+<img src="image.jpg" alt="A beautiful sunset">
+
+<!-- `src` defines the image URL or path -->
+<img src="sunset.jpg" alt="Sunset over the mountains">
+
+<!-- `alt` provides alternative text for SEO & accessibility -->
+<img src="ocean.jpg" alt="Blue ocean waves">
+
+<!-- `width` & `height` set the image size (in pixels) -->
+<img src="tree.jpg" alt="Green tree" width="300" height="200">
+
+<!-- `title` shows a tooltip when hovered -->
+<img src="bird.jpg" alt="Flying bird" title="A bird in flight">
+
+<!-- `loading="lazy"` improves performance by loading images only when needed -->
+<img src="mountain.jpg" alt="Snowy mountain" loading="lazy">
+
+<!-- Use `<figure>` and `<figcaption>` for better structure -->
+<figure>
+    <img src="river.jpg" alt="Flowing river" width="400">
+    <figcaption>Peaceful river flowing through the valley</figcaption>
+</figure>
+
+====== 5. Video Tag  ========
+
+<!-- Displays a video -->
+<video src="video.mp4" controls></video>
+
+<!-- `src` defines the video file path or URL -->
+<video src="nature.mp4" controls></video>
+
+<!-- `controls` adds play, pause, volume, etc. -->
+<video src="movie.mp4" controls></video>
+
+<!-- `autoplay` starts playing automatically (muted required for most browsers) -->
+<video src="clip.mp4" autoplay muted></video>
+
+<!-- `loop` makes the video replay continuously -->
+<video src="loop-video.mp4" loop controls></video>
+
+<!-- `poster` sets a preview image before the video plays -->
+<video src="trailer.mp4" poster="preview.jpg" controls></video>
+
+<!-- `width` & `height` define the video size -->
+<video src="small-video.mp4" width="400" height="300" controls></video>
+
+<!-- `muted` starts the video without sound -->
+<video src="silent.mp4" muted controls></video>
+
+<!-- Multiple sources for better compatibility -->
+<video controls>
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+</video>
+
+<!-- `<figure>` and `<figcaption>` for better structure -->
+<figure>
+    <video src="ocean.mp4" controls></video>
+    <figcaption>Ocean waves crashing on the shore</figcaption>
+</figure>
+
+====== 6. Anchor Tag ========
+
+<!-- Creates a hyperlink -->
+<a href="https://www.example.com">Visit Example</a>
+
+<!-- `href` defines the destination URL -->
+<a href="https://google.com">Go to Google</a>
+
+<!-- Opens the link in a new tab (`_blank`) -->
+<a href="https://github.com" target="_blank">Open GitHub</a>
+
+<!-- Opens in the same tab (`_self`, default behavior) -->
+<a href="https://wikipedia.org" target="_self">Wikipedia</a>
+
+<!-- Links to an email (mailto) -->
+<a href="mailto:someone@example.com">Send Email</a>
+
+<!-- Links to a phone number (tel) -->
+<a href="tel:+1234567890">Call Us</a>
+
+<!-- Internal link (same website) -->
+<a href="about.html">About Us</a>
+
+<!-- Link to a section inside the same page (using `id`) -->
+<a href="#contact">Go to Contact Section</a>
+
+<!-- Section to scroll to -->
+<h2 id="contact">Contact Us</h2>
+
+<!-- Download a file -->
+<a href="file.pdf" download>Download PDF</a>
+
+<!-- Link without `href` (acts like text) -->
+<a>No Link Here</a>
+
+<!-- Use `title` for tooltips when hovering -->
+<a href="https://twitter.com" title="Follow us on Twitter">Twitter</a>
+
+<!-- Style with CSS -->
+<a href="https://example.com" style="color: red; text-decoration: none;">Styled Link</a>
+
+
+====== 7. Pre tag =======
+
+<!-- The `<pre>` tag preserves spaces, line breaks, and formatting -->
+    <pre>
+        This is a preformatted text.
+            It keeps spaces and
+            line breaks exactly as written.
+        </pre>
+        
+        <!-- Useful for displaying code snippets -->
+        <pre>
+        function greet() {
+            console.log("Hello, World!");
+        }
+        </pre>
+        
+        <!-- `<pre>` is a block element (starts on a new line) -->
+        <pre>This is inside a pre tag.</pre>
+        <pre>This is another preformatted text.</pre>
+        
+        <!-- Combine with `<code>` for programming syntax -->
+        <pre>
+        <code>
+        let x = 10;
+        console.log(x);
+        </code>
+        </pre>
+        
+        <!-- Avoid using `<pre>` for regular text formatting (use CSS instead) -->
+        <p style="white-space: pre;">This text behaves like a pre tag.</p>
+        
+        <!-- Can be styled with CSS -->
+        <pre style="background-color: #f4f4f4; padding: 10px; border-radius: 5px;">
+        Styled preformatted text.
+        </pre>
+ 
+====== 8. Superscript and Subscript =======
+
+<!-- `<sup>` makes text smaller and raised (superscript) -->
+    <p>Water formula: H<sub>2</sub>O</p>
+
+    <!-- `<sub>` makes text smaller and lowered (subscript) -->
+    <p>Math equation: x<sub>2</sub> + y<sub>2</sub> = z<sub>2</sub></p>
+    
+    <!-- Used for footnotes -->
+    <p>Albert Einstein developed the theory of relativity<sup>[1]</sup>.</p>
+    
+    <!-- Used for chemical formulas -->
+    <p>Carbon dioxide: CO<sub>2</sub></p>
+    
+    <!-- Used for mathematical exponents -->
+    <p>Square of 5: 5<sup>2</sup> = 25</p>
+    
+    <!-- Works inside headings too -->
+    <h2>E = mc<sup>2</sup></h2>
+    
+    <!-- Can be styled with CSS -->
+    <p>This is <sup style="color: red;">red superscript</sup> and <sub style="color: blue;">blue subscript</sub>.</p>
+    
+
+
